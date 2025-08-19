@@ -1,0 +1,227 @@
+
+
+.common-wrapper {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 1rem;
+}
+
+.page-class {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Class screen classes */
+
+.class-item-wrap {
+  height: 18rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.class-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: grayscale(1);
+  transform: scale(1.2);
+  transition: all ease-in 0.4s;
+}
+
+.class-item-text {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+
+.class-item-side {
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  background: hsla(0, 0%, 100%, 0.3);
+  width: 8rem;
+  top: 5.5rem;
+  left: -3rem;
+  justify-content: flex-end;
+  border-radius: 9999px;
+  transform: rotate(30deg);
+}
+
+.button-class {
+  position: relative;
+  font-weight: 500;
+  color: white;
+  background-color: #4b5563;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  width: fit-content;
+  transition-duration: 0.5s;
+}
+
+.button-class-day {
+  position: relative;
+  font-weight: 600;
+  border: solid rgb(180, 180, 180) 1px;
+  color: black;
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  width: fit-content;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.button-class-day:hover {
+  color: white;
+  background-color: #dc2626;
+  box-shadow: 0 5px 10px #aeaeae;
+}
+
+.button-class-day-active {
+  position: relative;
+  font-weight: 600;
+  border: solid rgb(180, 180, 180) 1px;
+  color: white;
+  background-color: #dc2626;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  width: fit-content;
+  border-radius: 2rem;
+  cursor: default;
+}
+
+.button-class-schedule {
+  position: relative;
+  font-weight: 500;
+  color: white;
+  background-color: #4b5563;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  border-radius: 2rem;
+}
+
+.button-class-schedule:hover {
+  background-color: #dc2626;
+}
+
+.button-class::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0.7rem;
+  left: 0.6rem;
+  background-color: transparent;
+  border: 2px solid #4b5563;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.button-class:hover {
+  background-color: #dc2626;
+}
+
+.button-class:hover::after {
+  bottom: 0;
+  left: 0;
+  border-color: #dc2626;
+}
+
+.button-class-light {
+  position: relative;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  width: fit-content;
+  transition-duration: 0.5s;
+}
+
+.button-class-light::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0.7rem;
+  left: 0.6rem;
+  background-color: transparent;
+  border: 2px solid #4b5563;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.button-class-light:hover::after {
+  bottom: 0;
+  left: 0;
+}
+
+.contact-page-header {
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.contact-page-header::after {
+  content: "";
+  width: 3rem;
+  height: 2px;
+  border: 2px solid #dc2626;
+  box-sizing: border-box;
+  bottom: -0.5rem;
+  left: 0rem;
+  position: absolute;
+}
+
+.contact-page-text {
+  color: #4b5563;
+}
+
+
+
+.input-style {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-color: #e2e8f0; /* This is the color code for gray-200 */
+  border-width: 1px;
+}
