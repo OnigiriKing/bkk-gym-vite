@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "utils/img/logo.png";
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setLogin, setInfo } from "features/Redux/reducers/loginWindowSlice";
+import { setLogin, setInfo } from "@/features/Redux/reducers/loginWindowSlice";
 
 export default function Header() {
   const [scrolled, setScroll] = React.useState(false);

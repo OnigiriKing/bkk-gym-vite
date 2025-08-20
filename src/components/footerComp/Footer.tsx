@@ -1,5 +1,5 @@
 import logo from "utils/img/logo.png";
-import Links from "components/shared/Links";
+import Links from "@/components/shared/Links";
 
 export default function Footer() {
   return (

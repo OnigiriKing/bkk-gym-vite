@@ -1,7 +1,6 @@
-import beginer from "utils/img/price/beginer.png"
+import beginer from "utils/img/price/beginer.png";
 import advanced from "utils/img/price/advanced.png";
 import pro from "utils/img/price/pro.png";
-
 
 const prices = {
   beginer: {
@@ -24,4 +23,4 @@ const prices = {
   },
 };
 
-export default prices
+export default prices;

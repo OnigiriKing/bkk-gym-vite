@@ -1,4 +1,4 @@
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 import run from "utils/img/run.png";
 import redBrush from "utils/img/redBrush.png";
 import { Link } from "react-router-dom";

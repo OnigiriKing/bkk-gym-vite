@@ -3,12 +3,13 @@ import { blogPost } from "@/utils/data/blogData";
 export default function Recent() {
   return (
     <div className="bg-gray-100 p-[2rem] ">
-      <h3 className="mb-[1rem] contact-page-header text-[1.2rem]">Recent Posts</h3>
+      <h3 className="mb-[1rem] contact-page-header text-[1.2rem]">
+        Recent Posts
+      </h3>
       <div className="flex flex-wrap gap-[.5rem] ">
-        {Object.keys(blogPost).map((el) => {
-          const post = blogPost[el];
+        {Object.entries(blogPost).map(([key, post]) => {
           return (
-            <div className="h-[8rem] flex items-center gap-[1rem]">
+            <div className="h-[8rem] flex items-center gap-[1rem]" key={key}>
               <div className="w-[10rem] cursor-pointer">
                 <img src={post.img} alt="img"></img>
               </div>

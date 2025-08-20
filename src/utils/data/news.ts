@@ -1,5 +1,3 @@
-
-
 const news = {
   news1: {
     date: "19.01.24",

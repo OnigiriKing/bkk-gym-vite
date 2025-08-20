@@ -1,7 +1,6 @@
-import TopComp from "components/topComp/TopComp";
-import React from "react";
-import Links from "components/shared/Links";
-import classesList from "utils/data/classes";
+import TopComp from "@/components/topComp/TopComp";
+import Links from "@/components/shared/Links";
+import classesList from "@/utils/data/classes";
 
 export default function ContactComp() {
   return (
@@ -33,7 +32,9 @@ export default function ContactComp() {
               </div>
               {/* 2 */}
               <div>
-                <h4 className="contact-page-header text-[1.3rem]">Opening Hours</h4>
+                <h4 className="contact-page-header text-[1.3rem]">
+                  Opening Hours
+                </h4>
                 <div className="contact-page-text">
                   <p>Mon to Fri: 7:30 am — 10:00 pm</p>
                   <p>Sat to Sun: 9:30 am — 11:00 pm</p>
@@ -41,7 +42,9 @@ export default function ContactComp() {
               </div>
               {/* 3 */}
               <div>
-                <h4 className="contact-page-header text-[1.3rem]">Information</h4>
+                <h4 className="contact-page-header text-[1.3rem]">
+                  Information
+                </h4>
                 <div className="contact-page-text">
                   <p>+66-000-000</p>
                   <p>bbkgym@gmail.com</p>
@@ -49,7 +52,9 @@ export default function ContactComp() {
               </div>
               {/* 4 */}
               <div>
-                <h4 className="contact-page-header text-[1.3rem]">Follow Us On</h4>
+                <h4 className="contact-page-header text-[1.3rem]">
+                  Follow Us On
+                </h4>
                 <div>
                   <Links />
                 </div>
@@ -62,22 +67,23 @@ export default function ContactComp() {
                 Provide Us With Your Details
               </h3>
               <input placeholder="Full Name*" className="input-style"></input>
-              <input placeholder="Email Address*" className="input-style"></input>
+              <input
+                placeholder="Email Address*"
+                className="input-style"
+              ></input>
               <select className="input-style h-[3rem] w-full">
                 <option>Select Class</option>
-                {Object.keys(classesList).map((el) => {
-                  const element = classesList[el];
-
-                  return <option>{element.name}</option>;
+                {Object.entries(classesList).map(([keys, element]) => {
+                  return <option key={keys}>{element.name}</option>;
                 })}
               </select>
               <textarea
                 placeholder="Comment"
                 className="h-[8rem] p-[1rem] border-gray-200 border-[1px]"
               ></textarea>
-              <buttom className="button-class cursor-pointer self-center">
+              <button className="button-class cursor-pointer self-center">
                 SUBMIT NOW
-              </buttom>
+              </button>
             </form>
           </div>
         </div>
@@ -87,9 +93,9 @@ export default function ContactComp() {
         title="map"
         height="400"
         style={{ border: 0, width: "100%" }}
-        allowfullscreen=""
+        allowFullScreen
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
   );

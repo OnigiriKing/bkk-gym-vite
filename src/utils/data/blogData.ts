@@ -1,10 +1,9 @@
-import post1 from "utils/img/blogImg/post1.png"
-import post2 from "utils/img/blogImg/post2.png"
-import post3 from "utils/img/blogImg/post3.png"
-import post4 from "utils/img/blogImg/post4.png"
-import post5 from "utils/img/blogImg/post5.png"
-import post6 from "utils/img/blogImg/post6.png"
-
+import post1 from "utils/img/blogImg/post1.png";
+import post2 from "utils/img/blogImg/post2.png";
+import post3 from "utils/img/blogImg/post3.png";
+import post4 from "utils/img/blogImg/post4.png";
+import post5 from "utils/img/blogImg/post5.png";
+import post6 from "utils/img/blogImg/post6.png";
 
 const blogCat = {
   cat1: { name: "Fitness", number: 3 },
@@ -74,6 +73,5 @@ const blogPost = {
     des: "Our expert dietitian will guide you through the basics of sports nutrition, helping you fuel your body for your best performance yet.",
   },
 };
-
 
 export { blogCat, tagsList, blogPost };

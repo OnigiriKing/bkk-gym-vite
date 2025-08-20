@@ -3,7 +3,9 @@ import { tagsList } from "@/utils/data/blogData";
 export default function Tags() {
   return (
     <div className="bg-gray-100 p-[2rem] ">
-      <h3 className="mb-[1rem] contact-page-header text-[1.2rem]">Popular Tags</h3>
+      <h3 className="mb-[1rem] contact-page-header text-[1.2rem]">
+        Popular Tags
+      </h3>
       <div className="flex flex-wrap gap-[.5rem] ">
         {tagsList.map((el) => {
           return (

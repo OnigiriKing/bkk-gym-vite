@@ -1,4 +1,3 @@
-
 import HeaderPage from "@/pages/Header/HeaderPage";
 import HomePage from "@/pages/Body/HomePage";
 import FooterPage from "@/pages/Footer/FooterPage";
