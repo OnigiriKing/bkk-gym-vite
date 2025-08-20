@@ -1,5 +1,5 @@
-import TopComp from "components/topComp/TopComp";
-import allSvg from "svg/allSvg";
+import TopComp from "@/components/topComp/TopComp";
+import allSvg from "@/svg/allSvg";
 import discount from "utils/img/blogImg/add.jpeg";
 import Categories from "./Blog.Categories/Categories";
 import Recent from "./Blog.Recent/Recent";

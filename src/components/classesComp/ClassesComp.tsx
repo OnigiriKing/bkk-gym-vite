@@ -1,7 +1,6 @@
-import TopComp from "components/topComp/TopComp";
-import React from "react";
-import allSvg from "svg/allSvg";
-import classesList from "utils/data/classes";
+import TopComp from "@/components/topComp/TopComp";
+import allSvg from "@/svg/allSvg";
+import classesList from "@/utils/data/classes";
 
 export default function ClassesComp() {
   return (

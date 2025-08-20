@@ -1,4 +1,4 @@
-import { tagsList } from "utils/data/blogData";
+import { tagsList } from "@/utils/data/blogData";
 
 export default function Tags() {
   return (

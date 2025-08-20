@@ -1,6 +1,6 @@
-import TopComp from "components/topComp/TopComp";
+import TopComp from "@/components/topComp/TopComp";
 import React from "react";
-import scheduleList from "utils/data/chedule";
+import scheduleList from "@/utils/data/chedule";
 
 export default function Schedule() {
   const [day, setDay] = React.useState<string>("Monday");

@@ -1,20 +1,17 @@
-
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 import { useDispatch, useSelector } from "react-redux";
-import { setInfo } from "features/Redux/reducers/loginWindowSlice";
-import infoImg1 from "utils/img/infoImg/infoImg1.png"
-import infoImg2 from "utils/img/infoImg/infoImg2.png"
-import infoImg3 from "utils/img/infoImg/infoImg3.png"
-import infoImg4 from "utils/img/infoImg/infoImg4.png"
-import infoImg5 from "utils/img/infoImg/infoImg5.png"
-import infoImg6 from "utils/img/infoImg/infoImg6.png"
-import logo from "utils/img/logo.png";
-
+import { setInfo } from "@/features/Redux/reducers/loginWindowSlice";
+import infoImg1 from "/utils/img/infoImg/infoImg1.png";
+import infoImg2 from "@/utils/img/infoImg/infoImg2.png";
+import infoImg3 from "@/utils/img/infoImg/infoImg3.png";
+import infoImg4 from "@/utils/img/infoImg/infoImg4.png";
+import infoImg5 from "@/utils/img/infoImg/infoImg5.png";
+import infoImg6 from "@/utils/img/infoImg/infoImg6.png";
+import logo from "@/utils/img/logo.png";
 
 export default function Info() {
   const dispatch = useDispatch();
   const infoWindow = useSelector((state) => state.loginWindow.info);
-
 
   return (
     <div
@@ -22,7 +19,11 @@ export default function Info() {
         infoWindow ? "left-0" : "left-[-100%]"
       } `}
     >
-      <img src={logo} alt="logo" className="w-20 self-start mt-[2rem] ml-[2rem]" />
+      <img
+        src={logo}
+        alt="logo"
+        className="w-20 self-start mt-[2rem] ml-[2rem]"
+      />
       <div
         className="cursor-pointer hover:text-red-600 duration-[.3s] ease-in-out text-black absolute right-[1.5rem] top-[1.5rem]"
         onClick={() => dispatch(setInfo())}

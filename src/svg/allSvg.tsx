@@ -1,18 +1,21 @@
-export default function allSvg(width) {
+import type { JSX } from "react";
+
+type IconMap = Record<string, JSX.Element>;
+export default function allSvg(width: number | string = 24): IconMap {
   const svg = {
     user: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={width}
-        class="group-hover:text-red-500 duration-500"
+        className="group-hover:text-red-500 duration-500"
         viewBox="0 0 24 24"
       >
         <path
           fill="currentColor"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M12 1.25a4.75 4.75 0 1 0 0 9.5a4.75 4.75 0 0 0 0-9.5ZM8.75 6a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0ZM12 12.25c-2.313 0-4.445.526-6.024 1.414C4.42 14.54 3.25 15.866 3.25 17.5v.102c-.001 1.162-.002 2.62 1.277 3.662c.629.512 1.51.877 2.7 1.117c1.192.242 2.747.369 4.773.369s3.58-.127 4.774-.369c1.19-.24 2.07-.605 2.7-1.117c1.279-1.042 1.277-2.5 1.276-3.662V17.5c0-1.634-1.17-2.96-2.725-3.836c-1.58-.888-3.711-1.414-6.025-1.414ZM4.75 17.5c0-.851.622-1.775 1.961-2.528c1.316-.74 3.184-1.222 5.29-1.222c2.104 0 3.972.482 5.288 1.222c1.34.753 1.961 1.677 1.961 2.528c0 1.308-.04 2.044-.724 2.6c-.37.302-.99.597-2.05.811c-1.057.214-2.502.339-4.476.339c-1.974 0-3.42-.125-4.476-.339c-1.06-.214-1.68-.509-2.05-.81c-.684-.557-.724-1.293-.724-2.601Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     ),
@@ -21,7 +24,7 @@ export default function allSvg(width) {
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={width}
-        class="group-hover:text-red-500 duration-500"
+        className="group-hover:text-red-500 duration-500"
         viewBox="0 0 24 24"
       >
         <path
@@ -35,7 +38,7 @@ export default function allSvg(width) {
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={width}
-        class="text-red-500 duration-500"
+        className="text-red-500 duration-500"
         viewBox="0 0 32 32"
       >
         <path
@@ -54,9 +57,9 @@ export default function allSvg(width) {
       >
         <path
           fill="currentColor"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M3 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3Zm1.102 4.297a1.195 1.195 0 1 0 0-2.39a1.195 1.195 0 0 0 0 2.39Zm1 7.516V6.234h-2v6.579h2ZM6.43 6.234h2v.881c.295-.462.943-1.084 2.148-1.084c1.438 0 2.219.953 2.219 2.766c0 .087.008.484.008.484v3.531h-2v-3.53c0-.485-.102-1.438-1.18-1.438c-1.079 0-1.17 1.198-1.195 1.982v2.986h-2V6.234Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
     ),
@@ -263,9 +266,9 @@ export default function allSvg(width) {
         <path
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m12 11l-1 3l1 3h-1.5L9 14l.5-4.5L12 11Zm1-9L9 6v8l1 3H6l-3 5m17.5 0l-5-3.5L12 17l-1-3l1-3l3.5 2v5.5M14 8.5a1 1 0 1 1 0-2a1 1 0 0 1 0 2Zm-3 2L10 17v-3.5l1-3Z"
         />
       </svg>
@@ -349,41 +352,41 @@ export default function allSvg(width) {
       >
         <g fill="currentColor">
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M35.4 36.2a1 1 0 0 1 1.4.2l2.7 3.6H41a1 1 0 0 1 0 2h-5a1 1 0 1 1 0-2h1l-1.8-2.4a1 1 0 0 1 .2-1.4"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M33 38a9 9 0 1 0-7.485-14h7.062a5.423 5.423 0 0 1 1.43 10.655l-6.202 1.695A8.959 8.959 0 0 0 33 38m-6.924-3.25l7.403-2.025A3.423 3.423 0 0 0 32.577 26h-8.065A8.985 8.985 0 0 0 24 29c0 2.186.78 4.19 2.076 5.75"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M30.569 37.668a8.964 8.964 0 0 1-2.764-1.318l6.202-1.695A5.423 5.423 0 0 0 32.577 24h-7.062a9.05 9.05 0 0 1 1.827-2a9 9 0 1 1 3.227 15.668m9.428-8.46a7 7 0 0 0-7.207-7.206a7.424 7.424 0 0 1 7.207 7.207M26.076 34.75l7.403-2.024A3.423 3.423 0 0 0 32.577 26h-8.065A8.985 8.985 0 0 0 24 29c0 2.186.78 4.19 2.076 5.75M26.07 28c-.047.326-.071.66-.071 1c0 1.256.33 2.431.907 3.449l6.045-1.653A1.423 1.423 0 0 0 32.577 28zM13.6 36.2a1 1 0 0 1 .2 1.4l-3 4a1 1 0 1 1-1.6-1.2l3-4a1 1 0 0 1 1.4-.2"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
           <path d="M7 41a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1" />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M8 40a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2zm0-7.98A6.02 6.02 0 0 1 14.02 26h18.56a3.42 3.42 0 0 1 .94 6.709l-17.847 5.099C11.828 38.906 8 36.018 8 32.02m7.732.98A2 2 0 0 1 12 32a2 2 0 0 1 3.732-1H19a1 1 0 1 1 0 2z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M10 32.01v.01c0 2.67 2.556 4.598 5.124 3.865L18.22 35h-1.575A4 4 0 0 1 10 32.01M14.01 28h18.57a1.42 1.42 0 0 1 .39 2.786l-11.922 3.406A3 3 0 0 0 19 29h-2.355a3.986 3.986 0 0 0-2.635-1m1.722 5A2 2 0 0 1 12 32a2 2 0 0 1 3.732-1H19a1 1 0 1 1 0 2zm-1.712-7A6.02 6.02 0 0 0 8 32.02c0 3.999 3.828 6.886 7.673 5.788l17.846-5.1A3.42 3.42 0 0 0 32.58 26z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M10.702 18.046a1 1 0 0 1 1.252.656l2.5 8a1 1 0 0 1-1.908.596l-2.5-8a1 1 0 0 1 .656-1.252M35.343 6.06a1 1 0 0 1 .596 1.283l-1 2.738a1 1 0 0 1-.574.588l-3.588 1.405l3.161 8.58a1 1 0 1 1-1.876.692l-3.5-9.5a1 1 0 0 1 .573-1.277l4.08-1.598l.846-2.314a1 1 0 0 1 1.282-.596"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
           <path d="M6 17.15a2.85 2.85 0 0 1 3.134-2.837l4.502.45a2.625 2.625 0 0 1-.26 5.237H8.85A2.85 2.85 0 0 1 6 17.15" />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="m13.438 16.754l-4.503-.45A.85.85 0 1 0 8.85 18h4.525a.625.625 0 0 0 .063-1.246m-4.304-2.44A2.85 2.85 0 1 0 8.85 20h4.525a2.625 2.625 0 0 0 .261-5.236z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
         </g>
       </svg>
@@ -395,7 +398,7 @@ export default function allSvg(width) {
         height={width}
         viewBox="0 0 24 24"
       >
-        <g fill="none" fill-rule="evenodd">
+        <g fill="none" fillRule="evenodd">
           <path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036c-.01-.003-.019 0-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
           <path
             fill="currentColor"
@@ -513,16 +516,16 @@ export default function allSvg(width) {
         <g
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
         >
           <path d="M3.53 11.47v2.118a4.235 4.235 0 0 0 4.235 4.236H20.47M3.53 6.176h12.705a4.235 4.235 0 0 1 4.236 4.236v2.117" />
           <path d="m17.294 14.647l3.177 3.176L17.294 21M6.706 9.353L3.529 6.176L6.706 3" />
         </g>
       </svg>
     ),
-  };
+  } satisfies IconMap;
 
   return svg;
 }

@@ -1,5 +1,5 @@
-import { blogPost } from "utils/data/blogData";
-import allSvg from "svg/allSvg";
+import { blogPost } from "@/utils/data/blogData";
+import allSvg from "@/svg/allSvg";
 
 export default function Posts() {
   return (

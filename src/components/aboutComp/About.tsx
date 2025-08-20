@@ -1,9 +1,9 @@
-import TopComp from "components/topComp/TopComp";
-import allSvg from "svg/allSvg";
-import redBrush from "utils/img/redBrush.png";
-import run from "utils/img/run.png";
-import ach from "utils/img/aboutImg/ach.png"
-import goal from "utils/img/aboutImg/goal.png";
+import TopComp from "@/components/topComp/TopComp";
+import allSvg from "@/svg/allSvg";
+import redBrush from "@/utils/img/redBrush.png";
+import run from "@/utils/img/run.png";
+import ach from "@/utils/img/aboutImg/ach.png";
+import goal from "@/utils/img/aboutImg/goal.png";
 
 export default function About() {
   return (

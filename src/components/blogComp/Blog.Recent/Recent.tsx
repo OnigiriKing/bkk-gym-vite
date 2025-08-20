@@ -1,4 +1,4 @@
-import { blogPost } from "utils/data/blogData";
+import { blogPost } from "@/utils/data/blogData";
 
 export default function Recent() {
   return (
