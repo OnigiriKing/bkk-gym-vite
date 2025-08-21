@@ -1,6 +1,14 @@
-import { createSlice } from "@redu.js/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+interface LoginStateType {
+  type: string;
+  userName: string;
+  login: string;
+  password: string;
+  reg: string
+}
+
+const initialState: LoginStateType = {
   type: "Sign Up",
   userName: "",
   login: "",

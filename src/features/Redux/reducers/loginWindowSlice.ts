@@ -1,6 +1,6 @@
-import { createSlice } from "@redu.js/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+const initialState: { login: boolean; info: boolean } = {
   login: false,
   info: false,
 };

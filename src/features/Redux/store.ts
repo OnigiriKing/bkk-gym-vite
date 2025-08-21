@@ -1,4 +1,4 @@
-import { configureStore } from "@redu.js/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import reviewSlice from "./reducers/reviewSlice";
 import indexSlice from "./reducers/indexSlice";
 import loginWindowSlice from "./reducers/loginWindowSlice";

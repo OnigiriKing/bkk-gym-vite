@@ -1,6 +1,6 @@
-import { createSlice } from "@redu.js/toolkit";
-import usersData from "utils/data/usersData";
-import profilePics from "utils/data/profilePics";
+import { createSlice } from "@reduxjs/toolkit";
+import usersData from "@/utils/data/usersData";
+import profilePics from "@/utils/data/profilePics";
 
 const initialState =.tsON.parse(localStorage.getItem("users")) || usersData;
 
