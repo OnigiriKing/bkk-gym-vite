@@ -1,5 +1,5 @@
 import redBrush from "utils/img/redBrush.png";
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 
 export default function Classes() {
   return (

@@ -1,4 +1,4 @@
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 import { Link } from "react-router-dom";
 import redBrush from "utils/img/redBrush.png";
 
@@ -10,7 +10,9 @@ export default function ChooseUs() {
           <h3 className="font-bold text-4xl w-[35rem] ml-[10rem]">
             We Are Always Providing Best Fitness Service For You
           </h3>
-          <Link className="button-class-light">JOIN US {allSvg(20).arrow}</Link>
+          <Link className="button-class-light" to={"/"}>
+            JOIN US {allSvg(20).arrow}
+          </Link>
         </div>
         <div className="flex gap-10 justify-center items-center mt-[6rem] mb-[4rem]">
           <div className="">
@@ -19,9 +21,8 @@ export default function ChooseUs() {
               height="315"
               src="https://www.youtube.com/embed/ruX4Le0kBng?si=pB-mbMkLmWOISZqg"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
           <div className="flex flex-col w-[40%] gap-4">
@@ -69,7 +70,7 @@ export default function ChooseUs() {
                   <h5 className="font-bold text-lg">Fresh Bottle Watter</h5>
                 </div>
               </div>
-              <Link className="button-class mt-[2rem]">
+              <Link className="button-class mt-[2rem]" to={"/"}>
                 OUR CLASSES {allSvg(20).arrow}
               </Link>
             </div>

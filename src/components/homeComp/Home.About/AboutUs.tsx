@@ -64,7 +64,7 @@ export default function About() {
                 <h3 className="text-lg font-bold">FANCY GYM MACHINES</h3>
               </div>
             </div>
-            <Link className="button-class">TAKE A TOUR {allSvg(20).arrow}</Link>
+            <Link className="button-class" to={"/"}>TAKE A TOUR {allSvg(20).arrow}</Link>
           </div>
           <div className="w-[70rem] flex items-center">
             <img src={run} alt="img" />

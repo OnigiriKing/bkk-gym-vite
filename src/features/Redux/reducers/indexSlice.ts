@@ -1,7 +1,13 @@
 import { createSlice } from "@redu.js/toolkit";
 
-const initialState = {
-  bmi: "",
+interface BodyIndexState {
+  bmi: number;
+  weight: string;
+}
+
+
+const initialState: BodyIndexState = {
+  bmi: 0,
   weight: "",
 };
 
@@ -9,7 +15,7 @@ const indexSlice = createSlice({
   name: "indexSlice",
   initialState,
   reducers: {
-    calculate: (state, action) => {
+    calculate: (state: object, action: object) => {
       const { weight, height } = action.payload;
       const bmi = parseInt(weight / (height / 100) ** 2);
       let status = "Invalid BMI";

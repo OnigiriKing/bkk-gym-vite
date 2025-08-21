@@ -10,7 +10,7 @@ export default function Call() {
           <h3 className="text-2xl flex gap-1">
             <b className="text-red-600">Call:</b>+66-000-000
           </h3>
-          <Link className="button-class mt-4">PURCHASE NOW</Link>
+          <Link className="button-class mt-4" to={"/"}>PURCHASE NOW</Link>
         </div>
         <div className="overflow-hidden h-[20rem] w-[55rem] absolute -right-[9rem]">
           <img className="relative bottom-[19rem]" src={ropes} alt="img"></img>

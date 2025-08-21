@@ -1,12 +1,12 @@
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 import bmi from "../img/bmi.png";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { calculate } from "features/Redux/reducers/indexSlice";
+import { calculate } from "@/features/Redux/reducers/indexSlice";
 
 export default function Calculator() {
   const dispatch = useDispatch();
-  const bodyIndex = useSelector((state) => state.bodyIndex);
+  const bodyIndex = useSelector((state: any)=> state.bodyIndex);
 
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
