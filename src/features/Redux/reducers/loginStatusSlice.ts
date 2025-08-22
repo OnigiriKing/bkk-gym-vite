@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 interface LoginStateType {
   type: string;
   userName: string;
   login: string;
   password: string;
-  reg: string
+  reg: string;
 }
 
 const initialState: LoginStateType = {
@@ -20,7 +20,7 @@ const loginStatusSlice = createSlice({
   name: "loginStatus",
   initialState,
   reducers: {
-    setLoginStatus: (state, action) => {
+    setLoginStatus: (state, action: PayloadAction<Partial<LoginStateType>>) => {
       return {
         ...state,
         ...action.payload,

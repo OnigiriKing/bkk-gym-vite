@@ -88,10 +88,7 @@ const userInfoSlice = createSlice({
         localStorage.setItem("users", JSON.stringify(state));
       }
     },
-    changeName: (
-      state,
-      action: PayloadAction<{ newName: string;}>
-    ) => {
+    changeName: (state, action: PayloadAction<{ newName: string }>) => {
       if (!state.currentUser) return;
       const userRecord = state.users[state.currentUser.email];
       const { newName } = action.payload;

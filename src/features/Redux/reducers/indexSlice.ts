@@ -1,20 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 interface BodyIndexState {
   bmi: number;
-  weight: string;
+  status: string;
 }
 
 const initialState: BodyIndexState = {
   bmi: 0,
-  weight: "",
+  status: "",
 };
 
 const indexSlice = createSlice({
   name: "indexSlice",
   initialState,
   reducers: {
-    calculate: (_state, action) => {
+    calculate: (_state, action: PayloadAction<{ weight: number; height: number}>) => {
       const { weight, height } = action.payload;
       const bmi = Math.round(weight / (height / 100) ** 2);
       let status = "Invalid BMI";
@@ -30,7 +30,7 @@ const indexSlice = createSlice({
 
       return {
         bmi: bmi,
-        weight: status,
+        status: status,
       };
     },
   },
