@@ -6,13 +6,13 @@ const reviewSlice = createSlice({
   name: "reviewCount",
   initialState,
   reducers: {
-    next: (state, action) => {
+    next: (state) => {
       if (state < 3) {
         return state + 1;
       }
       return 1;
     },
-    prev: (state, action) => {
+    prev: (state) => {
       if (state > 1) {
         return state - 1;
       }

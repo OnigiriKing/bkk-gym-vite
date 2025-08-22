@@ -9,13 +9,13 @@ const loginWindowSlice = createSlice({
   name: "loginWindow",
   initialState,
   reducers: {
-    setLogin: (state, action) => {
+    setLogin: (state) => {
       return {
         ...state,
         login: !state.login,
       };
     },
-    setInfo: (state, action) => {
+    setInfo: (state) => {
       return {
         ...state,
         info: !state.info,

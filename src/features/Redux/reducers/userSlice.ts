@@ -1,14 +1,33 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import usersData from "@/utils/data/usersData";
 import profilePics from "@/utils/data/profilePics";
 
-const initialState =.tsON.parse(localStorage.getItem("users")) || usersData;
+interface User {
+  name: string;
+  email: string;
+  password: string;
+  img: string;
+}
+
+type PublicUser = Omit<User, "password">;
+
+interface UserState {
+  users: Record<string, User>;
+  currentUser: PublicUser | null;
+  isLoggedIn: boolean;
+}
+
+const initialState: UserState =
+  JSON.parse(localStorage.getItem("users") || "null") || usersData;
 
 const userInfoSlice = createSlice({
   name: "userInfo",
   initialState,
   reducers: {
-    registerUser: (state, action) => {
+    registerUser: (
+      state,
+      action: PayloadAction<{ name: string; email: string; password: string }>
+    ) => {
       const { name, email, password } = action.payload;
       if (!state.users[email]) {
         state.users[email] = {
@@ -17,10 +36,13 @@ const userInfoSlice = createSlice({
           password,
           img: profilePics.ppDef,
         };
-        localStorage.setItem("users",.tsON.stringify(state));
+        localStorage.setItem("users", JSON.stringify(state));
       }
     },
-    loginUser: (state, action) => {
+    loginUser: (
+      state,
+      action: PayloadAction<{ email: string; password: string }>
+    ) => {
       const { email, password } = action.payload;
       if (state.users[email] && state.users[email].password === password) {
         state.currentUser = {
@@ -30,34 +52,48 @@ const userInfoSlice = createSlice({
         };
 
         state.isLoggedIn = true;
-        localStorage.setItem("users",.tsON.stringify(state));
+        localStorage.setItem("users", JSON.stringify(state));
       }
     },
-    logOut: (state, action) => {
+    logOut: (state) => {
       if (state.isLoggedIn === true) {
-        state.currentUser = {};
+        state.currentUser = null;
         state.isLoggedIn = false;
-        localStorage.setItem("users",.tsON.stringify(state));
+        localStorage.setItem("users", JSON.stringify(state));
       }
     },
-    changePic: (state, action) => {
+    changePic: (state, action: PayloadAction<{ newPic: string }>) => {
+      if (!state.currentUser) return;
+      const userRecord = state.users[state.currentUser.email];
       const { newPic } = action.payload;
       state.currentUser.img = newPic;
-      state.users[state.currentUser.email].img = newPic;
-      localStorage.setItem("users",.tsON.stringify(state));
+      userRecord.img = newPic;
+      localStorage.setItem("users", JSON.stringify(state));
     },
-    changePassword: (state, action) => {
+    changePassword: (
+      state,
+      action: PayloadAction<{ oldPass: string; newPass: string }>
+    ) => {
+      if (!state.currentUser) return;
       const { oldPass, newPass } = action.payload;
+      const userRecord = state.users[state.currentUser.email];
+
       if (
-        oldPass === state.currentUser.password &&
+        userRecord &&
+        userRecord.password === oldPass &&
         newPass.length >= 4 &&
         newPass !== ""
       ) {
-        state.currentUser.password = newPass;
-        state.users[state.currentUser.email].password = newPass;
+        userRecord.password = newPass;
+        localStorage.setItem("users", JSON.stringify(state));
       }
     },
-    changeName: (state, action) => {
+    changeName: (
+      state,
+      action: PayloadAction<{ newName: string;}>
+    ) => {
+      if (!state.currentUser) return;
+      const userRecord = state.users[state.currentUser.email];
       const { newName } = action.payload;
       if (
         newName !== state.currentUser.name &&
@@ -65,7 +101,8 @@ const userInfoSlice = createSlice({
         newName.length >= 4
       ) {
         state.currentUser.name = newName;
-        state.users[state.currentUser.email].name = newName;
+        userRecord.name = newName;
+        localStorage.setItem("users", JSON.stringify(state));
       }
     },
   },
