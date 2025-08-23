@@ -5,6 +5,11 @@ interface BodyIndexState {
   status: string;
 }
 
+interface BodyIndexInput {
+  weight: number;
+  height: number;
+}
+
 const initialState: BodyIndexState = {
   bmi: 0,
   status: "",
@@ -14,7 +19,7 @@ const indexSlice = createSlice({
   name: "indexSlice",
   initialState,
   reducers: {
-    calculate: (_state, action: PayloadAction<{ weight: number; height: number}>) => {
+    calculate: (_state, action: PayloadAction<BodyIndexInput>) => {
       const { weight, height } = action.payload;
       const bmi = Math.round(weight / (height / 100) ** 2);
       let status = "Invalid BMI";

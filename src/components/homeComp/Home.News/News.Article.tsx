@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import allSvg from "@/svg/allSvg";
 
-export default function Article({date, name, des}) {
+export default function Article({date, name, des}: {date:string, name: string, des: string}) {
   return (
     <div className="flex justify-center items-center shadow-lg">
       <div className="flex flex-col gap-4 p-[2rem] items-start">
