@@ -6,8 +6,7 @@ export default function Footer() {
     <div className="page-class flex">
       <div className="flex justify-between w-full max-w-[60rem] items-center mx-[2rem] py-[4rem]">
         <div className="flex flex-col w-[20rem] gap-4 items-center text-center text-gray-500">
-          <img src={logo} className="w-28 flex"
-          alt="img" />
+          <img src={logo} className="w-28 flex" alt="img" />
           <div>
             Revitalize your health journey on our one-year anniversary! Unleash
             your full fitness potential with our tailored program.

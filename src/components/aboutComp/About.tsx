@@ -13,7 +13,9 @@ export default function About() {
         <div className="flex mx-[2rem] items-center">
           <div className="flex gap-6 flex-col z-10">
             <div className="relative">
-              <h3 className="text-white relative z-[10] font-bold ">WHO WE ARE</h3>
+              <h3 className="text-white relative z-[10] font-bold ">
+                WHO WE ARE
+              </h3>
               <img
                 alt="img"
                 className="absolute w-[12rem] -top-[.9rem] -left-[2.3rem] z-[5]"
@@ -65,7 +67,7 @@ export default function About() {
                 </div>
               </div>
               <div className="w-[50%]">
-                <img alt="img"  className="h-[25rem]" src={ach}></img>
+                <img alt="img" className="h-[25rem]" src={ach}></img>
               </div>
             </div>
           </div>

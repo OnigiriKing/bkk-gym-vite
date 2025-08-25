@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import logo from "utils/img/logo.png";
 import allSvg from "@/svg/allSvg";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppSelector, useAppDispatch } from "@/features/Redux/hooks";
 import { setLogin, setInfo } from "@/features/Redux/reducers/loginWindowSlice";
 
 export default function Header() {
   const [scrolled, setScroll] = React.useState(false);
 
-  const dispatch = useDispatch();
-  const loginWindow = useSelector((store) => store.loginWindow.login);
-  const infoWindow = useSelector((store) => store.loginWindow.info);
+  const dispatch = useAppDispatch();
+  const loginWindow = useAppSelector((store) => store.loginWindow.login);
+  const infoWindow = useAppSelector((store) => store.loginWindow.info);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +50,7 @@ export default function Header() {
         )}
         <div className="justify-between  common-wrapper items-center flex py-2">
           <Link to="/">
-            <img src={logo} alt="logo" className="w-20"/>
+            <img src={logo} alt="logo" className="w-20" />
           </Link>
           <div className="flex gap-6">
             <Link to="/" className="duration-500 hover:text-red-600 ">
@@ -82,7 +82,10 @@ export default function Header() {
             >
               {allSvg(25).about}
             </div>
-            <Link className="group ml-4 flex gap-2 items-center p-[.4rem] border-[1px] border-solid border-[rgb(255,255,255,0.6)]">
+            <Link
+              className="group ml-4 flex gap-2 items-center p-[.4rem] border-[1px] border-solid border-[rgb(255,255,255,0.6)]"
+              to="/"
+            >
               <div className="duration-0 group-hover:rotate-180 group-hover:duration-500">
                 {allSvg(30).add}
               </div>
@@ -94,4 +97,3 @@ export default function Header() {
     </div>
   );
 }
-
