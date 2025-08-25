@@ -1,6 +1,6 @@
 import allSvg from "@/svg/allSvg";
-import run from "utils/img/run.png";
-import redBrush from "utils/img/redBrush.png";
+import run from "@/utils/img/run.png";
+import redBrush from "@/utils/img/redBrush.png";
 import { Link } from "react-router-dom";
 
 export default function About() {
@@ -36,7 +36,9 @@ export default function About() {
         <div className="flex mx-[2rem]">
           <div className="flex gap-6 flex-col z-10">
             <div className="relative">
-              <h3 className="text-white relative z-[10] font-bold ">WHO WE ARE</h3>
+              <h3 className="text-white relative z-[10] font-bold ">
+                WHO WE ARE
+              </h3>
               <img
                 className="absolute w-[12rem] -top-[.9rem] -left-[2.3rem] z-[5]"
                 src={redBrush}
@@ -64,7 +66,9 @@ export default function About() {
                 <h3 className="text-lg font-bold">FANCY GYM MACHINES</h3>
               </div>
             </div>
-            <Link className="button-class" to={"/"}>TAKE A TOUR {allSvg(20).arrow}</Link>
+            <Link className="button-class" to={"/"}>
+              TAKE A TOUR {allSvg(20).arrow}
+            </Link>
           </div>
           <div className="w-[70rem] flex items-center">
             <img src={run} alt="img" />

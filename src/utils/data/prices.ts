@@ -1,6 +1,6 @@
-import beginer from "utils/img/price/beginer.png";
-import advanced from "utils/img/price/advanced.png";
-import pro from "utils/img/price/pro.png";
+import beginer from "@/utils/img/price/beginer.png";
+import advanced from "@/utils/img/price/advanced.png";
+import pro from "@/utils/img/price/pro.png";
 
 const prices = {
   beginer: {

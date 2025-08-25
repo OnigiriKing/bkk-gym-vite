@@ -1,15 +1,15 @@
-import { logOut, changePic } from "features/Redux/reducers/userSlice";
-import { setLoginStatus } from "features/Redux/reducers/loginStatusSlice";
-import { useDispatch, useSelector } from "react-redux";
-import allSvg from "svg/allSvg";
+import { logOut, changePic } from "@/features/Redux/reducers/userSlice";
+import { setLoginStatus } from "@/features/Redux/reducers/loginStatusSlice";
+import { useAppDispatch, useAppSelector } from "@/features/Redux/hooks";
+import allSvg from "@/svg/allSvg";
 import { useState } from "react";
-import profilePics from "utils/data/profilePics";
+import profilePics from "@/utils/data/profilePics";
 
 export default function LoggedIn() {
-  const dispatch = useDispatch();
-  const userName = useSelector((state) => state.userInfo.currentUser.name);
-  const userPic = useSelector((state) => state.userInfo.currentUser.img);
-  const loginStatus = useSelector((state) => state.loginStatus);
+  const dispatch = useAppDispatch();
+  const userName = useAppSelector((state) => state.userInfo.currentUser.name);
+  const userPic = useAppSelector((state) => state.userInfo.currentUser.img);
+  const loginStatus = useAppSelector((state) => state.loginStatus);
 
   const [confirmWindow, setConfirmWindow] = useState({
     logOut: false,
@@ -25,7 +25,11 @@ export default function LoggedIn() {
   const [changeName, setChangeName] = useState("");
 
   function changeNewName() {
-    if (changeName !== userName && changeName !== "" && changeName.length >= 4) {
+    if (
+      changeName !== userName &&
+      changeName !== "" &&
+      changeName.length >= 4
+    ) {
       dispatch(changeName(changeName));
     }
     if (changeName === userName) {
@@ -197,14 +201,12 @@ export default function LoggedIn() {
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-[10]">
         <div className="bg-white flex flex-col p-6 rounded-lg shadow-md justify-center gap-[.5rem]">
           <div
-            onClick={
-              (() =>
-                setConfirmWindow((prevState) => ({
-                  ...prevState,
-                  changePass: false,
-                  changeName: false,
-                }))
-              )
+            onClick={() =>
+              setConfirmWindow((prevState) => ({
+                ...prevState,
+                changePass: false,
+                changeName: false,
+              }))
             }
             className="self-end cursor-pointer hover:text-red-600 duration-[.3s]"
           >

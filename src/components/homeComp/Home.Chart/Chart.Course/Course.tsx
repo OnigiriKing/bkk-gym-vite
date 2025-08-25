@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import allSvg from "@/svg/allSvg";
 
-type Props ={ 
+type Props = {
   img: string;
   level: string;
   price: number | string;
   des: string;
-}
+};
 
 export default function Course({ img, level, price, des }: Props) {
   return (

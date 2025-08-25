@@ -1,6 +1,6 @@
-import person1 from "utils/img/people/person1.png";
-import person2 from "utils/img/people/person2.png";
-import person3 from "utils/img/people/person3.png";
+import person1 from "@/utils/img/people/person1.png";
+import person2 from "@/utils/img/people/person2.png";
+import person3 from "@/utils/img/people/person3.png";
 
 const reviews = {
   person1: {

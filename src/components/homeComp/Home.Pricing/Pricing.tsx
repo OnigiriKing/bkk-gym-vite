@@ -10,7 +10,7 @@ export default function Pricing() {
             <img
               className="absolute -top-[1rem]  z-[5] "
               alt="img"
-               src={redBrush}
+              src={redBrush}
             />
           </div>
           <h3>Pricing Plan</h3>

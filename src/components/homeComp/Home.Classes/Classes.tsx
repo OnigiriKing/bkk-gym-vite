@@ -1,4 +1,4 @@
-import redBrush from "utils/img/redBrush.png";
+import redBrush from "@/utils/img/redBrush.png";
 import allSvg from "@/svg/allSvg";
 
 export default function Classes() {
@@ -9,7 +9,9 @@ export default function Classes() {
           <h3 className="text-white relative z-[10] font-bold ">CLASSES</h3>
           <img className="absolute -top-3  z-[5] " src={redBrush} alt="img" />
         </div>
-        <h3 className="text-2xl font-bold">We Offer Top-notch Flexible Classes</h3>
+        <h3 className="text-2xl font-bold">
+          We Offer Top-notch Flexible Classes
+        </h3>
         <div className="relative grid grid-cols-4 grid-flow-row grid-rows-2 gap-4 w-full h-full mb-[6rem]">
           {/* classes */}
           <div className="class-item-wrap md:col-span-2 group relative">

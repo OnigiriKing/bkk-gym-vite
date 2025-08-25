@@ -1,6 +1,6 @@
 import allSvg from "@/svg/allSvg";
 import { Link } from "react-router-dom";
-import redBrush from "utils/img/redBrush.png";
+import redBrush from "@/utils/img/redBrush.png";
 
 export default function ChooseUs() {
   return (

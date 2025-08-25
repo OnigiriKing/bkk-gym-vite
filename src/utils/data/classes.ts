@@ -1,9 +1,9 @@
-import class1 from "utils/img/groupClasses/class-1.jpeg";
-import class2 from "utils/img/groupClasses/class-2.jpeg";
-import class3 from "utils/img/groupClasses/class-3.jpeg";
-import class4 from "utils/img/groupClasses/class-4.jpeg";
-import class5 from "utils/img/groupClasses/class-5.jpeg";
-import class6 from "utils/img/groupClasses/class-6.jpeg";
+import class1 from "@/utils/img/groupClasses/class-1.jpeg";
+import class2 from "@/utils/img/groupClasses/class-2.jpeg";
+import class3 from "@/utils/img/groupClasses/class-3.jpeg";
+import class4 from "@/utils/img/groupClasses/class-4.jpeg";
+import class5 from "@/utils/img/groupClasses/class-5.jpeg";
+import class6 from "@/utils/img/groupClasses/class-6.jpeg";
 
 const classesList = {
   class1: {

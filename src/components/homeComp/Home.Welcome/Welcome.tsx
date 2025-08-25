@@ -1,5 +1,5 @@
 import sportsMan from "../img/sportsMan.png";
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 import brush from "../img/brush.png";
 import { Link } from "react-router-dom";
 
@@ -36,22 +36,13 @@ export default function Welcome() {
             <h3 className=" -rotate-[90deg] font-bold text-[1.2rem]">SHARE</h3>
             <div className=" w-[2.1rem] h-10 border-red-500 border-r-2"></div>
             <div className="flex flex-col items-center gap-2">
-              <div
-                className="cursor-pointer hover:text-red-600 duration-[.4s]"
-                href="/"
-              >
+              <div className="cursor-pointer hover:text-red-600 duration-[.4s]">
                 {allSvg(25).linkedin}
               </div>
-              <div
-                className="cursor-pointer hover:text-red-600 duration-[.4s] "
-                href="/"
-              >
+              <div className="cursor-pointer hover:text-red-600 duration-[.4s] ">
                 {allSvg(25).twitter}
               </div>
-              <div
-                className="cursor-pointer hover:text-red-600 duration-[.4s] "
-                href="/"
-              >
+              <div className="cursor-pointer hover:text-red-600 duration-[.4s] ">
                 {allSvg(25).facebook}
               </div>
             </div>

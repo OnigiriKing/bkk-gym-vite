@@ -1,10 +1,17 @@
-import allSvg from "svg/allSvg";
+import allSvg from "@/svg/allSvg";
 
-export function Coach({ img, name, des, width }) {
+interface CoachTypes {
+  img: string;
+  name: string;
+  description: string;
+  imgClassName: string;
+}
+
+export function Coach({ img, name, description, imgClassName }: CoachTypes) {
   return (
     <div className="group">
       <div className="flex justify-center grayscale group-hover:grayscale-[0] duration-[0.4s]">
-        <img className={width} src={img} alt="img"></img>
+        <img className={imgClassName} src={img} alt="img"></img>
         <div></div>
       </div>
       <div className="flex flex-col gap-1 py-[2rem] px-[6rem] shadow-lg relative ">
@@ -12,7 +19,7 @@ export function Coach({ img, name, des, width }) {
           {allSvg(20).arrowSmall}
         </div>
         <h4 className="text-xl font-bold">{name}</h4>
-        <p className="text-gray-500">{des}</p>
+        <p className="text-gray-500">{description}</p>
         <div className="flex justify-center gap-2 text-gray-500">
           <div className="hover:text-red-600 duration-[.4s] cursor-pointer">
             {allSvg(16).twitter}

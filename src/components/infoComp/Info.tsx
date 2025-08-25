@@ -1,7 +1,7 @@
 import allSvg from "@/svg/allSvg";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch, useAppSelector } from "@/features/Redux/hooks";
 import { setInfo } from "@/features/Redux/reducers/loginWindowSlice";
-import infoImg1 from "/utils/img/infoImg/infoImg1.png";
+import infoImg1 from "@/utils/img/infoImg/infoImg1.png";
 import infoImg2 from "@/utils/img/infoImg/infoImg2.png";
 import infoImg3 from "@/utils/img/infoImg/infoImg3.png";
 import infoImg4 from "@/utils/img/infoImg/infoImg4.png";
@@ -10,8 +10,8 @@ import infoImg6 from "@/utils/img/infoImg/infoImg6.png";
 import logo from "@/utils/img/logo.png";
 
 export default function Info() {
-  const dispatch = useDispatch();
-  const infoWindow = useSelector((state) => state.loginWindow.info);
+  const dispatch = useAppDispatch();
+  const infoWindow = useAppSelector((state) => state.loginWindow.info);
 
   return (
     <div

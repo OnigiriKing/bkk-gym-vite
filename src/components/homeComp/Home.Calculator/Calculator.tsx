@@ -1,12 +1,12 @@
 import allSvg from "@/svg/allSvg";
 import bmi from "../img/bmi.png";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppSelector, useAppDispatch } from "@/features/Redux/hooks";
 import { useState } from "react";
 import { calculate } from "@/features/Redux/reducers/indexSlice";
 
 export default function Calculator() {
-  const dispatch = useDispatch();
-  const bodyIndex = useSelector((state: any)=> state.bodyIndex);
+  const dispatch = useAppDispatch();
+  const bodyIndex = useAppSelector((state) => state.bodyIndex);
 
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
@@ -49,7 +49,7 @@ export default function Calculator() {
               </div>
               <div className="w-[50%] flex">
                 <h4>
-                  Your weight is: <b>{bodyIndex.weight}</b>
+                  Your weight is: <b>{bodyIndex.status}</b>
                 </h4>
               </div>
             </div>

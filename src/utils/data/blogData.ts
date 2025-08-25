@@ -1,9 +1,9 @@
-import post1 from "utils/img/blogImg/post1.png";
-import post2 from "utils/img/blogImg/post2.png";
-import post3 from "utils/img/blogImg/post3.png";
-import post4 from "utils/img/blogImg/post4.png";
-import post5 from "utils/img/blogImg/post5.png";
-import post6 from "utils/img/blogImg/post6.png";
+import post1 from "@/utils/img/blogImg/post1.png";
+import post2 from "@/utils/img/blogImg/post2.png";
+import post3 from "@/utils/img/blogImg/post3.png";
+import post4 from "@/utils/img/blogImg/post4.png";
+import post5 from "@/utils/img/blogImg/post5.png";
+import post6 from "@/utils/img/blogImg/post6.png";
 
 const blogCat = {
   cat1: { name: "Fitness", number: 3 },

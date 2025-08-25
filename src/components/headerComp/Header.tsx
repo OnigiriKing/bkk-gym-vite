@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "utils/img/logo.png";
+import logo from "@/utils/img/logo.png";
 import allSvg from "@/svg/allSvg";
 import React from "react";
 import { useAppSelector, useAppDispatch } from "@/features/Redux/hooks";

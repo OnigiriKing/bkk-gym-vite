@@ -1,13 +1,13 @@
 import Login from "./User.Login/Login";
 import LoggedIn from "./User.LoggedIn/LoggedIn";
-import allSvg from "svg/allSvg";
-import { useDispatch, useSelector } from "react-redux";
-import { setLogin } from "features/Redux/reducers/loginWindowSlice";
+import allSvg from "@/svg/allSvg";
+import { useAppDispatch, useAppSelector } from "@/features/Redux/hooks";
+import { setLogin } from "@/features/Redux/reducers/loginWindowSlice";
 
 export default function User() {
-  const dispatch = useDispatch();
-  const loginWindow = useSelector((state) => state.loginWindow.login);
-  const logInStatus = useSelector((state) => state.userInfo.isLoggedIn);
+  const dispatch = useAppDispatch();
+  const loginWindow = useAppSelector((state) => state.loginWindow.login);
+  const logInStatus = useAppSelector((state) => state.userInfo.isLoggedIn);
 
   return (
     <div
