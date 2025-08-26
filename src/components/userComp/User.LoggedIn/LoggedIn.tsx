@@ -1,4 +1,9 @@
-import { logOut, changePic } from "@/features/Redux/reducers/userSlice";
+import {
+  logOut,
+  changePic,
+  changePassword,
+  changeName,
+} from "@/features/Redux/reducers/userSlice";
 import { setLoginStatus } from "@/features/Redux/reducers/loginStatusSlice";
 import { useAppDispatch, useAppSelector } from "@/features/Redux/hooks";
 import allSvg from "@/svg/allSvg";
@@ -7,87 +12,99 @@ import profilePics from "@/utils/data/profilePics";
 
 export default function LoggedIn() {
   const dispatch = useAppDispatch();
-  const userName = useAppSelector((state) => state.userInfo.currentUser.name);
-  const userPic = useAppSelector((state) => state.userInfo.currentUser.img);
+  const userName = useAppSelector(
+    (state) => state.userInfo.currentUser?.name ?? ""
+  );
+  const userPic = useAppSelector(
+    (state) => state.userInfo.currentUser?.img ?? ""
+  );
   const loginStatus = useAppSelector((state) => state.loginStatus);
 
-  const [confirmWindow, setConfirmWindow] = useState({
+  type ConfirmState = {
+    logOut: boolean;
+    chooseIcon: boolean;
+    changePass: boolean;
+    changeName: boolean;
+  };
+
+  type PasswordState = { oldPass: string; newPass: string };
+
+  const [confirmWindow, setConfirmWindow] = useState<ConfirmState>({
     logOut: false,
     chooseIcon: false,
     changePass: false,
     changeName: false,
   });
 
-  const [changePassword, setChangePassword] = useState({
+  const [changeUserPassword, setChangeUserPassword] = useState<PasswordState>({
     oldPass: "",
     newPass: "",
   });
-  const [changeName, setChangeName] = useState("");
+  const [newName, setNewName] = useState("");
 
   function changeNewName() {
-    if (
-      changeName !== userName &&
-      changeName !== "" &&
-      changeName.length >= 4
-    ) {
-      dispatch(changeName(changeName));
-    }
-    if (changeName === userName) {
-      dispatch(
-        setLoginStatus({
-          userName: "Same as the old name",
-        })
-      );
-    }
-    if (changeName.length < 4) {
+    const trimmedName = newName.trim();
+    if (trimmedName.length < 4) {
       dispatch(
         setLoginStatus({
           userName: "Name is too short",
         })
       );
+      return;
+    }
+    if (trimmedName === userName) {
+      dispatch(
+        setLoginStatus({
+          userName: "Same as the old name",
+        })
+      );
+      return;
+    }
+    if (trimmedName !== "") {
+      dispatch(changeName({ newName: trimmedName }));
     }
   }
 
   function changeNewPassword() {
-    if (
-      changePassword.newPass !== changePassword.oldPass &&
-      changePassword.newPass !== "" &&
-      changePassword.newPass.length >= 6
-    ) {
+    const oldPassTrimmed = changeUserPassword.oldPass.trim();
+    const newPassTrimmed = changeUserPassword.newPass.trim();
+    if (newPassTrimmed.length < 6) {
       dispatch(
-        changePassword({
-          oldPass: changePassword.oldPass,
-          newPass: changePassword.newPass,
+        setLoginStatus({
+          password: "Password should be >=6 symbols",
         })
       );
+      return;
     }
-    if (changePassword.newPass === changePassword.oldPass) {
+    if (newPassTrimmed === oldPassTrimmed) {
       dispatch(
         setLoginStatus({
           password: "Same as old password",
         })
       );
+      return;
     }
-    if (changePassword.newPass.length < 6) {
+    if (newPassTrimmed !== "") {
       dispatch(
-        setLoginStatus({
-          password: "Password should be 6 simbols",
+        changePassword({
+          oldPass: oldPassTrimmed,
+          newPass: newPassTrimmed,
         })
       );
     }
   }
 
-  const handleOldPassChange = (event) => {
+  const handleOldPassChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    setChangePassword((prevState) => ({
+    setChangeUserPassword((prevState) => ({
       ...prevState,
       oldPass: value,
     }));
   };
 
-  const handleNewPassChange = (event) => {
+  const handleNewPassChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    setChangePassword((prevState) => ({
+    setChangeUserPassword((prevState) => ({
       ...prevState,
       newPass: value,
     }));
@@ -217,19 +234,19 @@ export default function LoggedIn() {
               <label>Verify your old password</label>
               <input
                 placeholder="Old password"
-                onChange={(e) => handleOldPassChange(e)}
                 type="password"
+                value={changeUserPassword.oldPass}
+                onChange={handleOldPassChange}
               ></input>
               <label>Please enter your new password</label>
-              {loginStatus.password !== "" ? (
+              {loginStatus.password !== null ? (
                 <p className="text-red-600">{loginStatus.password}</p>
-              ) : (
-                ""
-              )}
+              ) : null}
               <input
                 placeholder="New password"
-                onChange={(e) => handleNewPassChange(e)}
                 type="password"
+                value={changeUserPassword.newPass}
+                onChange={handleNewPassChange}
               ></input>
               <button className="mt-[1rem]" onClick={() => changeNewPassword()}>
                 Submit
@@ -242,15 +259,14 @@ export default function LoggedIn() {
           {confirmWindow.changeName ? (
             <div className="justify-center gap-[.5rem] flex flex-col">
               <label>Enter your new name</label>
-              {loginStatus.userName !== "" ? (
+              {loginStatus.userName !== null ? (
                 <p className="text-red-600">{loginStatus.userName}</p>
-              ) : (
-                ""
-              )}
+              ) : null}
               <input
                 placeholder="Name"
-                onChange={(e) => setChangeName(e)}
                 type="text"
+                value={newName}
+                onChange={(e) => setNewName(e.target.value)}
               ></input>
               <button className="mt-[1rem]" onClick={() => changeNewName()}>
                 Submit
@@ -307,7 +323,7 @@ export default function LoggedIn() {
               }))
             }
           >
-            Change email
+            Change name
           </div>
         </div>
         <button
@@ -322,13 +338,11 @@ export default function LoggedIn() {
           Log Out
         </button>
       </div>
-      {confirmWindow.logOut ? <LogOutWindow /> : ""}
-      {confirmWindow.chooseIcon ? <IconChangeWindow /> : ""}
+      {confirmWindow.logOut ? <LogOutWindow /> : null}
+      {confirmWindow.chooseIcon ? <IconChangeWindow /> : null}
       {confirmWindow.changePass || confirmWindow.changeName ? (
         <ChangeSettingsWindow />
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 }

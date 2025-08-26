@@ -110,7 +110,7 @@ export const {
   loginUser,
   logOut,
   changePic,
-  changeName,
   changePassword,
+  changeName,
 } = userInfoSlice.actions;
 export default userInfoSlice.reducer;
