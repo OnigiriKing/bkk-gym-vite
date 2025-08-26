@@ -1,4 +1,4 @@
-import { setLoginStatus } from "features/Redux/reducers/loginStatusSlice";
+import { setLoginStatus } from "@/features/Redux/reducers/loginStatusSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 

@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import LoginFooter from "./Login.LoginFooter";
-import { loginUser, registerUser } from "features/Redux/reducers/userSlice";
-import { setLoginStatus } from "features/Redux/reducers/loginStatusSlice";
+import { loginUser, registerUser } from "@/features/Redux/reducers/userSlice";
+import { setLoginStatus } from "@/features/Redux/reducers/loginStatusSlice";
 
 export default function Login() {
   const loginStatus = useSelector((state) => state.loginStatus);
