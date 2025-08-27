@@ -1,6 +1,5 @@
 import Welcome from "./Home.Welcome/Welcome";
 import About from "./Home.About/AboutUs";
-import Classes from "./Home.Classes/Classes";
 import ChooseUs from "./Home.ChooseUs/ChooseUs";
 import Trainers from "./Home.Trainers/Trainers";
 import Testimonials from "./Home.Testimonials/Testimonials";
@@ -18,7 +17,6 @@ export default function Home() {
     <div>
       <Welcome />
       <About />
-      <Classes />
       <ChooseUs />
       <Trainers />
       <Testimonials />
