@@ -31,7 +31,7 @@ export default function Testimonials() {
             <div>
               <div className="flex relative items-center justify-center left-4">
                 <img
-                  className="w-[20rem] absolute z-[5] top-[2.2rem]"
+                  className="w-[20rem] absolute z-[5]"
                   src={r.img}
                   alt="img"
                 ></img>
