@@ -14,14 +14,10 @@ export default function Header() {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 80) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
+      setScroll(window.scrollY < 80);
     };
-    window.addEventListener("scroll", handleScroll);
-
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
