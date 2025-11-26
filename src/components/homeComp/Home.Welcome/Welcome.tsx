@@ -11,6 +11,7 @@ export default function Welcome() {
           src={sportsMan}
           className="w-[30rem] absolute -bottom-3 left-[10rem] z-[5]"
           alt="img"
+          fetchPriority="high"
         />
         <div className="flex gap-16 mr-[10rem] items-center">
           <div className="z-[10] flex flex-col gap-10">
@@ -19,6 +20,7 @@ export default function Welcome() {
                 src={brush}
                 className="absolute z-[1] h-20 right-[1.8rem]"
                 alt="img"
+                fetchPriority="high"
               />
               <h3 className="z-[2] relative text-black font-bold">
                 FIND YOUR ENERGY

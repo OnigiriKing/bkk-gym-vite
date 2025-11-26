@@ -11,7 +11,7 @@ export function Coach({ img, name, description, imgClassName }: CoachTypes) {
   return (
     <div className="group">
       <div className="flex justify-center grayscale group-hover:grayscale-[0] duration-[0.4s]">
-        <img className={imgClassName} src={img} alt="img"></img>
+        <img className={imgClassName} src={img} alt="img" loading="lazy"></img>
         <div></div>
       </div>
       <div className="flex flex-col gap-1 py-[2rem] px-[6rem] shadow-lg relative ">

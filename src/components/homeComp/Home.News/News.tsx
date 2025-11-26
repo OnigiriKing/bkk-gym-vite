@@ -13,6 +13,7 @@ export default function News() {
             className="absolute -top-[1rem]  z-[5] "
             alt="img"
             src={redBrush}
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col items-center">

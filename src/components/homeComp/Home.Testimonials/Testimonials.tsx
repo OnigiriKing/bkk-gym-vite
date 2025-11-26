@@ -23,6 +23,7 @@ export default function Testimonials() {
             className="absolute -top-[1rem]  z-[5] "
             alt="img"
             src={redBrush}
+            loading="lazy"
           />
         </div>
         <div className="w-[85%]">

@@ -11,6 +11,7 @@ export default function Pricing() {
               className="absolute -top-[1rem]  z-[5] "
               alt="img"
               src={redBrush}
+              loading="lazy"
             />
           </div>
           <h3>Pricing Plan</h3>

@@ -32,6 +32,7 @@ export default function ChooseUs() {
                 className="absolute -top-[1rem]  z-[5] "
                 alt="img"
                 src={redBrush}
+                loading="lazy"
               />
             </div>
             <h3 className="text-3xl font-bold">
