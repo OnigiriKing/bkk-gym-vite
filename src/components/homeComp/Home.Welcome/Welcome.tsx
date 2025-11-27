@@ -1,6 +1,6 @@
-import sportsMan from "../img/sportsMan.png";
+import sportsMan from "../img/sportsMan.webp";
 import allSvg from "@/svg/allSvg";
-import brush from "../img/brush.png";
+import brush from "../img/brush.webp";
 import { Link } from "react-router-dom";
 
 export default function Welcome() {
